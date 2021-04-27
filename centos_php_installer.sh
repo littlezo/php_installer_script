@@ -56,28 +56,22 @@ rpmkeys --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial \
 dnf module reset php \
     && dnf module enable php:remi-${PHP_VERSION} -y \
     && dnf install pkgconfig -y\
-    && INSTALL_PKGS="php-gd php-xhprof php-ast php-cli php-dba \
-    php-dbg php-pdo php-xml php-imap php-intl php-json \
-    php-ldap php-snmp php-soap php-tidy php-devel \
-    php-bcmath php-brotli php-common php-recode php-sodium \
-    php-xmlrpc php-enchant php-libvirt php-mysqlnd php-pecl-ds \
-    php-pecl-ev php-process php-embedded php-mbstring \
-    php-pecl-dio php-pecl-eio php-pecl-env php-pecl-lzf \
-    php-pecl-nsq php-pecl-psr php-pecl-zip php-pecl-zmq \
-    php-componere php-pecl-grpc php-pecl-http php-pecl-ssh2 \
-    php-pecl-sync php-pecl-uuid php-pecl-vips \
-    php-pecl-yaml php-phpiredis php-wkhtmltox php-pecl-event \
-    php-pecl-geoip php-pecl-gnupg php-pecl-mysql php-pecl-oauth \
-    php-pecl-stats php-pecl-xattr php-pecl-xxtea php-pecl-base58 \
-    php-pecl-hrtime php-pecl-mcrypt php-pecl-pdflib \
-    php-pecl-propro php-pecl-redis php-pecl-decimal \
-    php-pecl-xmldiff php-pecl-igbinary php-pecl-mogilefs \
-    php-pecl-json-post php-pecl-ip2location \
-    php-pecl-http-message php-bcmath php-cli php-common php-dba \
-    php-dbg php-gd php-gmp php-intl php-json php-ldap \
-    php-mbstring php-mysqlnd php-pdo php-process php-pecl-apcu \
-    php-recode php-soap php-xml php-zip php-pecl-redis php-swoole \
-    php-xmlrpc  php-devel"  \
+    && INSTALL_PKGS="php-gd php-xhprof php-ast php-cli php-dba php-dbg php-pdo \
+    php-xml php-imap php-intl php-json php-ldap php-snmp php-soap \
+    php-tidy php-devel php-bcmath php-brotli php-common php-recode \
+    php-sodium php-xmlrpc php-enchant php-libvirt php-mysqlnd \
+    php-pecl-ds php-pecl-ev php-process php-embedded php-mbstring \
+    php-pecl-dio php-pecl-eio php-pecl-env php-pecl-lzf php-pecl-nsq \
+    php-pecl-psr php-pecl-zip php-pecl-zmq php-componere php-pecl-grpc \
+    php-pecl-http php-pecl-ssh2 php-pecl-sync php-pecl-uuid \
+    php-pecl-vips php-pecl-yaml php-phpiredis php-wkhtmltox \
+    php-pecl-event php-pecl-geoip php-pecl-gnupg php-pecl-mysql \
+    php-pecl-oauth php-pecl-stats php-pecl-xattr php-pecl-xxtea \
+    php-pecl-base58 php-pecl-hrtime php-pecl-mcrypt php-pecl-pdflib \
+    php-pecl-propro php-pecl-redis php-pecl-decimal php-pecl-xmldiff \
+    php-pecl-igbinary php-pecl-mogilefs php-pecl-json-post \
+    php-pecl-ip2location php-pecl-http-message php-gmp php-pecl-apcu \
+    php-zip php-swoole"  \
     && yum install -y libstdc++ openssl pcre-devel pcre2-devel openssl-devel supervisor unzip zlib-devel git wget \
     $INSTALL_PKGS --skip-broken --setopt=tsflags=nodocs --nogpgcheck\
     && rm -rf /var/cache/yum/*  \
