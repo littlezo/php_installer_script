@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 PHP_VERSION=8.0
 # 初始化
 rpmkeys --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial &&
